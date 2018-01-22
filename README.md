@@ -1,6 +1,7 @@
-# Jurl
+# ![![Jurl][logo]][Jurl]
+   [logo]: https://mrdickplus.github.io/Jurl/jurl.png "Jurl"
 ## Description
-[Jurl][Jurl] is a command line tool to help you get java code (which use Jsoup to send http/https request) and quickly send the request as curl.
+[Jurl][Jurl] is a command line tool to help you get java code (which use Jsoup to send http/https request) and quickly send the request as curl
 ## Feature
 -[x] Easy to covert curl commands into java.
 -[x] Help windows users who don't have curl in cmd.
