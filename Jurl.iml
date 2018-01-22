@@ -10,5 +10,7 @@
     <orderEntry type="library" name="jsoup-1.10.3" level="project" />
     <orderEntry type="library" name="LvJson" level="project" />
     <orderEntry type="library" name="jansi-1.16" level="project" />
+    <orderEntry type="library" name="jackson-core-2.9.3" level="project" />
+    <orderEntry type="library" name="jackson-annotations-2.9.3" level="project" />
   </component>
 </module>

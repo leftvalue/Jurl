@@ -20,11 +20,11 @@ public class Controller {
 
     public static void main(String[] args) {
         try {
-            String description = "欢迎来到 Jurl 的世界 :)\n" +
-                    "粘贴 curl 指令并回车以得到 java 代码\n" +
-                    "其他命令 :\n" +
-                    "V : 预览上次网络请求的 response(如果请求得到文件,则直接下载文件到 pwd 下);\n" +
-                    "Q 或 exit : 退出程序\n" +
+            String description = "Welcome to the world of Jurl :)\n" +
+                    "You can paste curl command and enter to get Java Code(in jsoup)\n" +
+                    "Other commands :\n" +
+                    "V : view the result of the last request's response(if the response is not text,it will auto download to pwd );\n" +
+                    "Q 或 exit : exit the application\n" +
                     "\t\t\tby leftvalue";
             System.out.println(ansi().fg(Color.BLUE).bold().bg(Color.WHITE).a(description).reset());
             JansiService.print(":)", Color.YELLOW);
@@ -43,17 +43,16 @@ public class Controller {
                     if (jnt != null) {
                         jnt.handle();
                     } else {
-                        JansiService.print("无历史 curl 记录,请输入 curl 后预览", Color.RED);
+                        JansiService.print("No history request ,please paste curl commands and retry again", Color.RED);
                     }
                 } else {
                     try {
                         Request request = parse(line);
                         if (request == null) {
-                            JansiService.print("命令解析失败,请检查重试~", Color.RED);
-                            System.out.println("");
+                            JansiService.print("Fail to parse the command,please check it~", Color.RED);
                         } else {
                             jnt = new JsoupNetTool(request);
-                            JansiService.print(jnt.write2JAVA(), Color.GREEN);
+                            JansiService.print(jnt.write2ColorfulJAVA(), Color.GREEN);
                         }
                     } catch (Exception e) {
                         e.printStackTrace();

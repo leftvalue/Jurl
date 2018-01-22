@@ -32,4 +32,15 @@ public class JansiService {
         System.out.println(ansi().eraseScreen().fg(color).a(str).reset());
     }
 
+    /**
+     * 得到指定字符串的特定颜色表示
+     *
+     * @param str
+     * @param color
+     * @return
+     */
+    public static String getColorString(String str, Ansi.Color color) {
+        return ansi().fg(color).a(str).reset().toString();
+    }
+
 }
