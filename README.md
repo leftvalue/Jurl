@@ -1,11 +1,12 @@
-# ![![Jurl][logo]][Jurl]
-   [logo]: https://mrdickplus.github.io/Jurl/jurl.png "Jurl"
+# ![](https://mrdickplus.github.io/Jurl/jurl.png)
 ## Description
-[Jurl][Jurl] is a command line tool to help you get java code (which use Jsoup to send http/https request) and quickly send the request as curl
+[Jurl](https://github.com/mrdickplus/Jurl/) is a command line tool to help you get java code (which use Jsoup to send http/https request) and quickly send the request as curl
 ## Feature
--[x] Easy to covert curl commands into java.
--[x] Help windows users who don't have curl in cmd.
--[x] Simply format and highlight Html & Json for reading friendly
+
+- [x] Easy to covert curl commands into java.
+- [x] Help windows users who don't have curl in cmd.
+- [x] Simply format and highlight Html & Json for reading friendly
+
 ## Synopsis
 
 Mostly browsers have dev-tools that you can easily see all network history when you visit a website.When I write spider ,I need to use serveral special request and resend it to get my useful information(data).
