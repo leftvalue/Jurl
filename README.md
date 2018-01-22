@@ -1,4 +1,5 @@
-# ![](https://mrdickplus.github.io/Jurl/jurl.png)
+# ![](/jurl.png)
+![](	https://img.shields.io/github/license/mrdickplus/Jurl.svg) 
 ## Description
 [Jurl](https://github.com/mrdickplus/Jurl/) is a command line tool to help you get java code (which use Jsoup to send http/https request) and quickly send the request as curl
 ## Feature
