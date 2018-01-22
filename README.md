@@ -1,7 +1,9 @@
 # [![](/jurl.png)](https://github.com/leftvalue/Jurl)
-![](	https://img.shields.io/github/license/leftvalue/Jurl.svg) ![](https://img.shields.io/badge/Power_by-leftvalue-orange.svg)[![](https://img.shields.io/badge/download-it-blue.svg)](https://github.com/leftvalue/Jurl/raw/out/Jurl.jar)
+![](	https://img.shields.io/github/license/leftvalue/Jurl.svg) 
+![](https://img.shields.io/badge/Power_by-leftvalue-orange.svg)
+![](https://img.shields.io/badge/download-it-blue.svg)
 ## Description
-[Jurl](https://github.com/leftvalue/Jurl/) is a command line tool to help you get java code (which use Jsoup to send http/https request) and quickly send the request as curl
+[Jurl](https://github.com/leftvalue/Jurl/) is a command line tool to help you get java code (which use Jsoup to send http/https request) and quickly send the request as curl ✈️
 ## Feature
 
 - [x] Easy to covert curl commands into java.
