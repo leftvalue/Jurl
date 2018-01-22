@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="jsoup-1.9.2">
+    <archive path="/Users/linxi/Programming/Jurl/libs/jsoup-1.9.2.jar" />
+  </library>
+</eclipse-userlibraries>
+

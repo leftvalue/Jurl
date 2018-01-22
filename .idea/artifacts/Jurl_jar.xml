@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Jurl:jar">
+    <output-path>$PROJECT_DIR$/out/</output-path>
+    <root id="archive" name="Jurl.jar">
+      <element id="module-output" name="Jurl" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jsoup-1.10.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/LvJson.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jansi-1.16.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
