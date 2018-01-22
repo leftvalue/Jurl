@@ -1,5 +1,5 @@
 # [![](/jurl.png)](https://github.com/leftvalue/Jurl)
-![](	https://img.shields.io/github/license/leftvalue/Jurl.svg) ![](https://img.shields.io/badge/Power_by-leftvalue-orange.svg)
+![](	https://img.shields.io/github/license/leftvalue/Jurl.svg) ![](https://img.shields.io/badge/Power_by-leftvalue-orange.svg)[![](https://img.shields.io/badge/download-it-blue.svg)](https://github.com/leftvalue/Jurl/raw/out/Jurl.jar)
 ## Description
 [Jurl](https://github.com/leftvalue/Jurl/) is a command line tool to help you get java code (which use Jsoup to send http/https request) and quickly send the request as curl
 ## Feature
@@ -20,6 +20,6 @@ What you need to do is,download the Jurl.jar and run it :
 ```shell
 java -jar Jurl.jar
 ```
-Open your browser (such as Chrome or Firefox and so on) and then open the dev-tools.After you visit a website and want to use a request,just Copy-\>Copy as curl,and paste it in the jurl terminal.It will give you the java code.
+Open your browser (such as Chrome or Firefox and so on) and then open the dev-tools.After you visit a website and want to use a request,just `Copy-\>Copy` as curl,and paste it in the jurl terminal.It will give you the java code.
 You can also enter V to view the response of last request.If the request got an response that is not text,jurl will download it to the current workspace and open it using the default app of your desktop.
 ## Example Usage
