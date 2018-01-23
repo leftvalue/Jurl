@@ -7,6 +7,7 @@ import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import tools.Contype2FilenameExtension;
 import tools.JansiService;
+import tools.SystemClipboardTools;
 
 import static tools.JansiService.*;
 
@@ -184,13 +185,16 @@ public class JsoupNetTool extends BaseNetTool {
                 ObjectMapper mapper = new ObjectMapper();
                 Object obj = mapper.readValue(getBody(), Object.class);
                 String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj);
-                json = json.replaceAll("\\[", ansi().fg(Ansi.Color.CYAN).a("[").reset().toString());
-                json = json.replaceAll("\\]", ansi().fg(Ansi.Color.CYAN).a("]").reset().toString());
-                json = json.replaceAll("\\{", ansi().fg(Ansi.Color.YELLOW).a("{").reset().toString());
-                json = json.replaceAll("\\}", ansi().fg(Ansi.Color.YELLOW).a("}").reset().toString());
+
+                SystemClipboardTools.write(json);
+
+                json = json.replaceAll("\\[", ansi().fg(Ansi.Color.BLUE).a("[").reset().toString());
+                json = json.replaceAll("\\]", ansi().fg(Ansi.Color.BLUE).a("]").reset().toString());
+                json = json.replaceAll("\\{", ansi().fg(Ansi.Color.GREEN).a("{").reset().toString());
+                json = json.replaceAll("\\}", ansi().fg(Ansi.Color.GREEN).a("}").reset().toString());
                 json = json.replaceAll(",", ansi().fg(Ansi.Color.GREEN).a(",").reset().toString());
-                json = json.replaceAll(":", ansi().fg(Ansi.Color.RED).a(":").reset().toString());
-                json = json.replace("\"", ansi().fg(Ansi.Color.BLUE).a("\"").reset().toString());
+                json = json.replaceAll(":", ansi().fg(Ansi.Color.CYAN).a(":").reset().toString());
+                json = json.replaceAll("\\\"", ansi().fg(Ansi.Color.RED).a("\"").reset().toString());
                 System.out.println(json);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -198,6 +202,9 @@ public class JsoupNetTool extends BaseNetTool {
             }
         } else if (contentType.contains("text/html")) {
             String body = getBody();
+
+            SystemClipboardTools.write(body);
+
             body = body.replaceAll("\\$", "RDS_CHAR_DOLLAR");// encode replacement;
             StringBuffer sb = new StringBuffer();
             Matcher me = htmlTagPattern.matcher(body);
@@ -209,9 +216,11 @@ public class JsoupNetTool extends BaseNetTool {
             }
             me.appendTail(sb);
             body = sb.toString().replaceAll("RDS_CHAR_DOLLAR", "\\$");
-            System.out.println(sb.toString());
+            System.out.println(body);
         } else if (contentType.contains("text/plain;")) {
             String body = getBody();
+            SystemClipboardTools.write(body);
+
             JansiService.print(body, Ansi.Color.CYAN);
             flag = true;
         } else {
