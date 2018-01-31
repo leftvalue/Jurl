@@ -12,11 +12,6 @@ import org.fusesource.jansi.Ansi;
 import tools.JansiService;
 import tools.SystemClipboardTools;
 
-import java.awt.*;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
-import java.awt.datatransfer.StringSelection;
-import java.awt.datatransfer.Transferable;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -25,12 +20,12 @@ import static org.fusesource.jansi.Ansi.*;
 
 public class Controller {
 
-
     public static void main(String[] args) {
         try {
             String description = "Welcome to the world of Jurl :)\n" +
                     "You can paste curl command and enter to get Java Code(in jsoup)\n" +
                     "Other commands :\n" +
+                    "C : auto import curl commands from system clipboard" +
                     "V : view the result of the last request's response(if the response is not text,it will auto download to pwd );\n" +
                     "Q 或 exit : exit the application\n" +
                     "\t\t\tby leftvalue";
